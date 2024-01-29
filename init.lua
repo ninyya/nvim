@@ -1,4 +1,4 @@
--- Set leader
+-- Set leader before Lazy is installed
 vim.g.mapleader = " "
 
 -- Lazy.nvim
@@ -15,12 +15,4 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("set")
-require("remap")
-
-require("lazy").setup("plugins", {
-	install = {
-		missing = true,
-		colorscheme = { "catppuccin" },
-	},
-})
+require("init")
