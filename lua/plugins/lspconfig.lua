@@ -25,8 +25,10 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
 				settings = {
 					Lua = {
 						diagnostics = {
@@ -36,8 +38,12 @@ return {
 				},
 			})
 			-- lspconfig.pyright.setup({})
-			lspconfig.tsserver.setup({})
-			lspconfig.rust_analyzer.setup({})
+			lspconfig.tsserver.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities,
+			})
 
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
