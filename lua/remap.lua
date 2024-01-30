@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 
 -- fix dos lineendings
-map("n", "<leader>xp", ":%s/\\r$//<CR><C-o>", {})
+map("n", "<leader>xp", ":%s/\\r$//<CR><C-o>", {desc = "Fix lineendings"})
 
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -20,3 +20,6 @@ map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
 map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
 map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
 map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+
+-- Clear search with <esc>
+map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })

@@ -18,6 +18,7 @@ return {
 					"lua_ls",
 					"rust_analyzer",
 					"tsserver",
+          "ruff_lsp",
 				},
 			})
 		end,
@@ -32,7 +33,10 @@ return {
 				settings = {
 					Lua = {
 						diagnostics = {
-							globals = { "vim" },
+							globals = {
+                "vim",
+                "desc"
+              },
 						},
 					},
 				},
@@ -44,13 +48,16 @@ return {
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
+      lspconfig.ruff_lsp.setup({
+				capabilities = capabilities,
+      })
 
-			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
-			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
+			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {desc = "Go To Declaration"})
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {desc = "Go To Defintion"})
+			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {desc = "Go To Implementation"})
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, {desc = "Hover"})
+			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {desc = "Code Action"})
+			vim.keymap.set("n", "gr", vim.lsp.buf.references, {desc = "Go To Reference"})
 		end,
 	},
 }
