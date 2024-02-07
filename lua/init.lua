@@ -1,4 +1,4 @@
-require("set")
+require("settings")
 require("remap")
 
 require("lazy").setup("plugins", {
