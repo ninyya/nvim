@@ -5,7 +5,8 @@ return {
 			"L3MON4D3/LuaSnip",
 			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
-      "hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-nvim-lsp",
+			"zbirenbaum/copilot-cmp",
 		},
 		config = function()
 			local cmp = require("cmp")
@@ -31,6 +32,7 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
+          { name = "copilot"},
 				}, {
 					{ name = "buffer" },
 				}),
