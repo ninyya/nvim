@@ -1,5 +1,5 @@
 require("settings")
-require("remap")
+require("keymaps")
 
 require("lazy").setup("plugins", {
 	install = {

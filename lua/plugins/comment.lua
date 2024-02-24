@@ -11,16 +11,16 @@ return {
     ---LHS of operator-pending mappings in NORMAL and VISUAL mode
     opleader = {
       ---Line-comment keymap
-      line = "<leader>-c",
+      line = "<leader>--",
       ---Block-comment keymap
-      block = "<leader>-b",
+      block = "<leader>-*",
     },
     ---LHS of extra mappings
     extra = {
       ---Add comment on the line above
-      above = "<leader>-o",
+      above = "<leader>-O",
       ---Add comment on the line below
-      below = "<leader>-O",
+      below = "<leader>-o",
       ---Add comment at the end of line
       eol = "<leader>-A",
     },
