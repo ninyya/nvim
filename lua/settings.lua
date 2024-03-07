@@ -1,5 +1,5 @@
 -- Set Clipboard
-vim.opt.clipboard = "unnamedplus"
+-- vim.opt.clipboard = "unnamedplus"
 
 -- Set relative linenumbers
 vim.opt.number = true
@@ -37,8 +37,12 @@ vim.opt.colorcolumn = "80"
 -- Append '@' as valid char in filenames
 vim.opt.isfname:append("@-@")
 
+-- Set updatetime
 vim.opt.updatetime = 50
+vim.opt.timeoutlen = 300
 
-
-
-
+-- Sets how neovim will display certain whitespace in the editor.
+--  See `:help 'list'`
+--  and `:help 'listchars'`
+-- vim.opt.list = true
+-- vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }

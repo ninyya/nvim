@@ -14,7 +14,8 @@ return {
                 lualine_b = { "branch" },
                 lualine_c = { "encoding", "fileformat", "filetype" },
                 lualine_x = {
-                    {
+                    -- Disabled Noice
+                    --[[ {
                         require("noice").api.statusline.mode.get,
                         cond = require("noice").api.statusline.mode.has,
                         color = { fg = "#cba6f7" },
@@ -23,7 +24,7 @@ return {
                         require("noice").api.statusline.command.get,
                         cond = require("noice").api.statusline.command.has,
                         color = { fg = "#cba6f7" },
-                    },
+                    }, ]]
                 },
                 lualine_y = {
                     {
