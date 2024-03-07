@@ -52,7 +52,7 @@ return {
 					-- winblend = 10,
 					-- previewer = false,
 				}
-			end, { desc = "Search Open Buffers })
+			end, { desc = "Search Open Buffers "})
 
 			-- vim.keymap.set("n", "<leader>ss", builtin.oldfiles, { desc = "Spell Check String" })
 
