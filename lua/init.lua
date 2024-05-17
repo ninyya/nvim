@@ -1,5 +1,5 @@
-require("settings")
-require("keymaps")
+require("customs.settings")
+require("customs.keymaps")
 
 require("lazy").setup("plugins", {
 	install = {
