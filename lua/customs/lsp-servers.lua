@@ -2,7 +2,11 @@ return {
 	-- mojo = {},
 	pyright = {},
 	rust_analyzer = {},
-	clangd = {},
+	clangd = {
+		capabilities = {
+			offsetEncoding = "utf-8",
+		},
+	},
 	lua_ls = {
 		settings = {
 			Lua = {
