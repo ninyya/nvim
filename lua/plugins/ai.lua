@@ -11,6 +11,7 @@ return {
 					javascript = true,
 					typescript = true,
 					python = true,
+					powershell = true,
 					cpp = true,
 					c = true,
 					lua = true,
