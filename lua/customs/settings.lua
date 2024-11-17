@@ -1,5 +1,5 @@
 -- Set Clipboard
--- vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 -- Set relative linenumbers
 vim.opt.number = true
